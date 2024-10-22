@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    gap: 10px;
+    background-color: #F9FBFD;
+}
+
+header > div {
+    background-image: url("./imagenes/logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    margin: 5px;
+}
+
+header * {
+    display: flex;
+}
+
+nav {
+    flex-direction: column;
+}
+
+nav > ul {
+    padding: 5px;
+    gap: 5px;
+}
+
+nav > ul > li {
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+nav > ul > li > p {
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+
+nav > ul > li:hover > p {
+    background-color: #E8EBEE;
+}
+
+nav > ul > li ul {
+    visibility: hidden;
+    width: 380px;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    padding: 10px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+nav > ul > li:hover > ul {
+    visibility: visible;
+}
+
+nav > ul > li ul > li {
+    position: relative;
+}
+
+nav > ul > li ul > li > p {
+    width: 100%;
+}
+
+nav > ul > li ul > li:hover > p{
+    background-color: #E8EBEE;
+}
+
+nav > ul > li ul > li > p > img {
+    width: 50px;
+    padding: 10px;
+}
+
+nav > ul > li ul > li > p > span {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+nav > ul > li ul > li > p > span > span {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+nav > ul > li ul > li > p > span:nth-of-type(2) {
+    width: auto;
+    color: gray;
+    font-weight: bold;
+}
+
+nav > ul > li ul > li > ul {
+    left: 98%;
+    top: 2%;
+    position: absolute;
+    visibility: hidden;
+}
+
+nav > ul > li ul > li:hover > ul {
+    visibility: visible;
+}
